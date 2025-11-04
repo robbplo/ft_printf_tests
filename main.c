@@ -6,7 +6,7 @@
 /*   By: rploeger <rploeger@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:54:04 by rploeger          #+#    #+#             */
-/*   Updated: 2025/11/04 18:07:13 by rploeger         ###   ########.fr       */
+/*   Updated: 2025/11/04 18:13:38 by rploeger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,61 +161,61 @@ int	main(void)
 	// TEST("%#01x\n", 0);
 	// TEST("%#02x\n", 0);
 	//
-	// printf("\n. flag with d\n\n");
-	// TEST("%.d\n", 0);
-	// TEST("%.0d\n", 0);
-	// TEST("%.1d\n", 0);
-	// TEST("%.1d\n", 1);
-	// TEST("%.2d\n", 1);
-	// TEST("%.3d\n", 1);
-	// TEST("%.1d\n", -1);
-	// TEST("%.2d\n", -1);
-	// TEST("%.3d\n", -1);
-	// TEST("%.10d\n", 0);
-	// TEST("%.10d\n", 123);
-	// TEST("%.10d\n", -123);
-	// TEST("%.10d\n", -123);
-	// TEST("%.9d\n", INT_MAX);
-	// TEST("%.10d\n", INT_MAX);
-	// TEST("%.11d\n", INT_MAX);
-	// TEST("%.9d\n", INT_MIN);
-	// TEST("%.10d\n", INT_MIN);
-	// TEST("%.11d\n", INT_MIN);
-	// printf("\n. flag with u\n\n");
-	// TEST("%.u\n", 0);
-	// TEST("%.0u\n", 0);
-	// TEST("%.1u\n", 0);
-	// TEST("%.1u\n", 1);
-	// TEST("%.2u\n", 1);
-	// TEST("%.3u\n", 1);
-	// TEST("%.1u\n", -1);
-	// TEST("%.2u\n", -1);
-	// TEST("%.3u\n", -1);
-	// TEST("%.10u\n", 0);
-	// TEST("%.10u\n", 123);
-	// TEST("%.10u\n", -123);
-	// TEST("%.10u\n", -123);
-	// TEST("%.9u\n", INT_MAX);
-	// TEST("%.10u\n", INT_MAX);
-	// TEST("%.11u\n", INT_MAX);
-	// TEST("%.9u\n", INT_MIN);
-	// TEST("%.10u\n", INT_MIN);
-	// TEST("%.11u\n", INT_MIN);
-	//
-	// printf("\n. flag with x\n\n");
-	// TEST("%.12x\n", 0);
-	// TEST("%#.12x\n", 0);
-	// TEST("%.12x\n", 555);
-	// TEST("%#.12x\n", 555);
-	// TEST("%.12x\n", -555);
-	// TEST("%#.12x\n", -555);
+	printf("\n. flag with d\n\n");
+	TEST("%.d\n", 0);
+	TEST("%.0d\n", 0);
+	TEST("%.1d\n", 0);
+	TEST("%.1d\n", 1);
+	TEST("%.2d\n", 1);
+	TEST("%.3d\n", 1);
+	TEST("%.1d\n", -1);
+	TEST("%.2d\n", -1);
+	TEST("%.3d\n", -1);
+	TEST("%.10d\n", 0);
+	TEST("%.10d\n", 123);
+	TEST("%.10d\n", -123);
+	TEST("%.10d\n", -123);
+	TEST("%.9d\n", INT_MAX);
+	TEST("%.10d\n", INT_MAX);
+	TEST("%.11d\n", INT_MAX);
+	TEST("%.9d\n", INT_MIN);
+	TEST("%.10d\n", INT_MIN);
+	TEST("%.11d\n", INT_MIN);
+	printf("\n. flag with u\n\n");
+	TEST("%.u\n", 0);
+	TEST("%.0u\n", 0);
+	TEST("%.1u\n", 0);
+	TEST("%.1u\n", 1);
+	TEST("%.2u\n", 1);
+	TEST("%.3u\n", 1);
+	TEST("%.1u\n", -1);
+	TEST("%.2u\n", -1);
+	TEST("%.3u\n", -1);
+	TEST("%.10u\n", 0);
+	TEST("%.10u\n", 123);
+	TEST("%.10u\n", -123);
+	TEST("%.10u\n", -123);
+	TEST("%.9u\n", INT_MAX);
+	TEST("%.10u\n", INT_MAX);
+	TEST("%.11u\n", INT_MAX);
+	TEST("%.9u\n", INT_MIN);
+	TEST("%.10u\n", INT_MIN);
+	TEST("%.11u\n", INT_MIN);
+
+	printf("\n. flag with x\n\n");
+	TEST("%.12x\n", 0);
+	TEST("%#.12x\n", 0);
+	TEST("%.12x\n", 555);
+	TEST("%#.12x\n", 555);
+	TEST("%.12x\n", -555);
+	TEST("%#.12x\n", -555);
 
 	// printf("\n. flag with s\n\n");
-	// TEST("%.3s|\n", NULL);
-	// TEST("%.1s|\n", "hi");
-	// TEST("%.2s|\n", "yesyes");
-	// TEST("%.3s|\n", "yesyes");
-	// TEST("%.8s|\n", "yesyes");
+	TEST("%.3s|\n", NULL);
+	TEST("%.1s|\n", "hi");
+	TEST("%.2s|\n", "yesyes");
+	TEST("%.3s|\n", "yesyes");
+	TEST("%.8s|\n", "yesyes");
 	TEST("%-8.s|\n", "yesyes");
 	TEST("%7.3s|\n", "yesyes");
 	TEST("%3.7s|\n", "yesyes");
