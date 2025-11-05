@@ -6,7 +6,7 @@
 /*   By: rploeger <rploeger@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 09:54:04 by rploeger          #+#    #+#             */
-/*   Updated: 2025/11/05 10:50:17 by rploeger         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:31:05 by rploeger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	main(void)
 	TEST("%c\n", '0');
 	TEST("%c\n", '0' - 256);
 	TEST("%c\n", '0' + 256);
+	TEST("{%4c}\n", 0);
 
 	print_header("Test string");
 	TEST("%s\n", "");
@@ -177,7 +178,9 @@ int	main(void)
 
 	print_header(". flag with d");
 	TEST("%.d\n", 0);
+	TEST("%.d\n", 123);
 	TEST("%.0d\n", 0);
+	TEST("%.0d\n", 123);
 	TEST("%.1d\n", 0);
 	TEST("%.1d\n", 1);
 	TEST("%.2d\n", 1);
@@ -196,6 +199,12 @@ int	main(void)
 	TEST("%.10d\n", INT_MIN);
 	TEST("%.11d\n", INT_MIN);
 	TEST("%5.10d\n", -123);
+	TEST("%05.10d\n", -123);
+	TEST("%0.0d\n", -123);
+	TEST("%010.0d\n", -123);
+	TEST("%10.5d\n", -123);
+	TEST("%010.5d\n", -123);
+	TEST("%-010.0d\n", -123);
 
 	print_header(". flag with u");
 	TEST("%.u\n", 0);
@@ -217,19 +226,6 @@ int	main(void)
 	TEST("%.9u\n", INT_MIN);
 	TEST("%.10u\n", INT_MIN);
 	TEST("%.11u\n", INT_MIN);
-
-	print_header(". flag with x");
-	TEST("%.x\n", 0);
-	TEST("%#.x\n", 0);
-	TEST("%#.1x\n", 0);
-	TEST("%#.2x\n", 0);
-	TEST("%#.3x\n", 0);
-	TEST("%.12x\n", 0);
-	TEST("%#.12x\n", 0);
-	TEST("%.12x\n", 555);
-	TEST("%#.12x\n", 555);
-	TEST("%.12x\n", -555);
-	TEST("%#.12x\n", -555);
 
 	print_header(". flag with s");
 	TEST("%.s|\n", NULL);
@@ -253,5 +249,21 @@ int	main(void)
 	TEST0("%3%|\n");
 	TEST0("%.3%|\n");
 	TEST0("%-.3%|\n");
+
+	print_header(". flag with x");
+	TEST("%.x\n", 0);
+	TEST("%#.x\n", 0);
+	TEST("%#.1x\n", 0);
+	TEST("%#.2x\n", 0);
+	TEST("%#.3x\n", 0);
+	TEST("%.12x\n", 0);
+	TEST("%#.12x\n", 0);
+	TEST("%.12x\n", 555);
+	TEST("%#.12x\n", 555);
+	TEST("%.12x\n", -555);
+	TEST("%#.12x\n", -555);
+	TEST("%20.x\n", 0x1234abcdu);
+	TEST("%3x\n", 0);
+
 }
 
